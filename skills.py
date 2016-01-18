@@ -74,8 +74,8 @@ def print_dict(occurances):
     return occurances
 
     # Dear Ally,
-    # First of all def count_unique(input_string) can't pass unless there's 
-    # a def print_dict(occurances), which i creates above. As I do not see any 
+    # def count_unique(input_string) can't pass unless there's 
+    # print_dict is defined, which I created above. As I do not see any 
     # learning outcome from creating it, I wonder if I am not getting something.
 
     # Here is a mistake I am getting now:
@@ -85,17 +85,16 @@ def print_dict(occurances):
         # Got:
         # {'Porcupine': 1, 'porcupine': 1, 'see,': 1, 'do.': 1}
 
-    # Basically I am expected to produce an ordered dictionary. That's cute.
+    # Basically I am expected to produce an ordered dictionary. ?!?!
 
-    # Here are 2 ways I tried to solve this:
+    # Here are 2 ways I tried to solve this, with no success:
 
     # >>>ordered_occurances = collections.OrderedDict(sorted(occurances.items()))
     # >>>return odered_occurances
 
     # I am left with a list of tuples, which looks alot like expected outcome,
     # but is not a dictionary
-    # If I make this list into a dictionary i am back to square one,
-    # cause guess what, dictionaries are not ordered.
+    # If I make this list into a dictionary i am back to square one
 
 
     # >>>sorted_dictionary = sorted(occurances.items(), key=operator.itemgetter(0))
@@ -104,9 +103,8 @@ def print_dict(occurances):
     # ...    string_parts.append("'%s': %d"%(key, value))
     # >>>return '{'+', '.join(string_parts)+'}'
 
-    # This produces a string that look veru much like desired outcome,
-    # but is just a string, NOT an ordered dictionary,
-    # whatever that might be
+    # This produces a string that looks very much like desired outcome,
+    # but is just a string, NOT an ordered dictionary, whatever that might be
 
 def count_unique(input_string):
     """Count unique words in a string.
@@ -183,7 +181,8 @@ def translate_to_pirate_talk(phrase):
 
     """
     # I had to create this dictionary private_speak so I had 
-    # dictionary to work with
+    # a dictionary to work with. Seems like a wrong thing to do.
+    # What am I not getting here?
 
     pirate_speak = {
         "sir": "matey",
@@ -199,7 +198,7 @@ def translate_to_pirate_talk(phrase):
         "restroom": "head",
         "my": "me",
         "is": "be",
-        "man": "matey"  # I added this translation else test does not pass
+        "man": "matey"  # Added this for test to pass, what am i missing?
     }
 
     translation = []
