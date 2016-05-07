@@ -278,9 +278,23 @@ def get_sum_zero_pairs(input_list):
         [[-2, 2], [-1, 1], [0, 0]]
 
     """
+    
+    # ALTERNATIVE SOLUTION
+    
+    # eliminate_repeats = list(set(input_list))
+
+    # result = []
+
+    # for num in eliminate_repeats:
+    #     if num == 0:
+    #         result.append([0, 0])
+    #     elif num > 0:
+    #         if -num in eliminate_repeats:
+    #             result.append([-num, num])
+
+    # print sorted(result)
 
     eliminate_repeats = set(input_list)
-
 
     def is_valid(pair):
         if pair[0]+pair[1] == 0:
